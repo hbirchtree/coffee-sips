@@ -11,6 +11,8 @@ tags:
 Template code for safe downcasting:
 
 {{< highlight cpp >}}
+#define IS_INT(Type) std::is_integral<Type>::value
+
 template<typename D,
 	 typename T,
 	 typename std::enable_if<IS_INT(D) && IS_INT(T)>::type* = nullptr,
@@ -35,4 +37,9 @@ static inline D C_FCAST(T from)
 	      ? min_val
 	      : from;
 }
+
 {{< / highlight >}}
+
+This combines with a template that activates for types that can safely be casted into others.
+
+The intention of the template is to only check conversions that **may** fail.
