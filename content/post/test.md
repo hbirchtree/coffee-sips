@@ -9,9 +9,10 @@ First post. That's a great start.
 
 Here's some code:
 
-
+```
     std::cout << "Hello World!" << std::endl;
     printf("Hello World!\n");
+```
 
 
 And that's all I wrote.
