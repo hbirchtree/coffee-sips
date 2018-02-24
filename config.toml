@@ -3,3 +3,5 @@ relativeURLs = true
 languageCode = "en-us"
 title = "have some coffee"
 theme = "after-dark"
+pygmentsUseClassic = true
+pygmentsStyle = "monokai"
