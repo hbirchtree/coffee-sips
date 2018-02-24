@@ -10,6 +10,7 @@ tags:
 
 Template code for safe downcasting:
 
+{{< highlight cpp >}}
 	template<typename D,
 		 typename T,
 		 typename std::enable_if<IS_INT(D) && IS_INT(T)>::type* = nullptr,
@@ -34,3 +35,4 @@ Template code for safe downcasting:
 		      ? min_val
 		      : from;
 	}
+{{< / highlight >}}
